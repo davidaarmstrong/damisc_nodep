@@ -29,6 +29,7 @@ S3method(searchVarLabels, tbl_df)
 S3method(inspect, data.frame)
 S3method(inspect, tbl_df)
 export(
+    secondDiff,
     DAintfun3,
     testGAMint,
     probci,
