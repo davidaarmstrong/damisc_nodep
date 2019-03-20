@@ -10,11 +10,25 @@ importFrom("stats", "AIC", "BIC", "alias", "anova", "as.formula",
              "pnorm", "predict", "pt", "qt", "quantile", "relevel",
              "residuals", "residuals.glm", "sd", "terms", "update",
              "var", "vcov", "gaussian", "glm")
+importFrom("games", "clarke")
+importFrom("AICcmodavg", "AICc")
+importFrom("fANCOVA", "loess.as")
+importFrom("VGAM", "yeo.johnson")
+importFrom("optiscale", "opscale")
+importFrom("utils", "combn")
+importFrom("boot", "cv.glm")
+importFrom("VGAM", "pgumbel")
+importFrom("QRM", "pGumbel")
 import(car)
 import(effects)
 import(grid)
 import(lattice)
 import(MASS)
+import(nnet)
+import(splines)
+import(pscl)
+import(gdata)
+import(xtable)
 S3method(plot, diffci)
 S3method(print, diffci)
 S3method(plot, balsos)
@@ -22,14 +36,28 @@ S3method(summary, balsos)
 S3method(print, pre)
 S3method(plot, loess)
 S3method(print, mnlfit)
+S3method(print, glmc2)
+S3method(print, iqq)
 S3method(print, ordfit)
 S3method(print, ordChange)
+S3method(central, factor)
+S3method(central, numeric)
 S3method(searchVarLabels, data.frame)
 S3method(searchVarLabels, tbl_df)
 S3method(inspect, data.frame)
 S3method(inspect, tbl_df)
+S3method(probgroup, polr)
+S3method(probgroup, multinom)
+S3method(summary, polr)
+S3method(print, summary.polr)
 export(
-    secondDiff,
+    poisfit,
+    probgroup, 
+    probgroup.polr, 
+    probgroup.multinom, 
+    oc2plot, 
+    print.summary.polr, 
+    summary.polr,
     DAintfun3,
     testGAMint,
     probci,
@@ -82,4 +110,6 @@ export(
     aveEffPlot,
     NKnots,
     NKnotsTest,
-    testLoess)
+    testLoess, 
+    secondDiff, 
+    outEff)
